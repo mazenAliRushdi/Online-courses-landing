@@ -390,4 +390,79 @@ img {
 }
 .features .feature-item p {
   color: #6c757d;
+}
+
+.testimonials {
+  padding: 100px 0;
+}
+.testimonials .testimonial-col {
+  margin-block: 0.75rem;
+}
+.testimonials .testimonial-card {
+  background: var(--card-bg);
+  padding: 2rem;
+  border-radius: 8px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+  margin-bottom: 30px;
+  height: 100%;
+  border: 1px solid var(--border-color);
+  transition: all 0.3s ease;
+}
+.testimonials .testimonial-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+}
+.testimonials .testimonial-card .testimonial-rating {
+  color: #ffc107;
+  margin-bottom: 1rem;
+}
+.testimonials .testimonial-card .testimonial-text {
+  font-style: italic;
+  margin-bottom: 1.5rem;
+  color: var(--text-color);
+}
+.testimonials .testimonial-card .testimonial-author {
+  display: flex;
+  align-items: center;
+}
+.testimonials .testimonial-card .testimonial-author .testimonial-img {
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  margin-right: 1rem;
+  border: 3px solid #4e6bff;
+}
+.testimonials .testimonial-card .testimonial-author h5 {
+  margin-bottom: 0.25rem;
+}
+.testimonials .testimonial-card .testimonial-author p {
+  color: #6c757d;
+  font-size: 0.9rem;
+  margin-bottom: 0;
+}
+
+.cta {
+  padding: 100px 0;
+  background: #4e6bff;
+  color: white;
+  text-align: center;
+}
+.cta .cta-content {
+  max-width: 700px;
+  margin: 0 auto;
+}
+.cta .cta-content h2 {
+  font-size: 2.5rem;
+  margin-bottom: 1.5rem;
+}
+.cta .cta-content p {
+  font-size: 1.25rem;
+  margin-bottom: 2rem;
+  opacity: 0.9;
+}
+.cta .cta-content .btn {
+  padding: 1rem 2rem;
+  font-size: 1.1rem;
 }/*# sourceMappingURL=style.css.map */
