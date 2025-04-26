@@ -226,4 +226,41 @@ img {
   .nav-link::after {
     display: none;
   }
+}
+.hero {
+  padding: 180px 0 100px;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  background: linear-gradient(135deg, rgba(78, 107, 255, 0.1) 0%, rgba(78, 107, 255, 0) 100%);
+}
+.hero .hero-content h1 {
+  font-size: 3.5rem;
+  font-weight: 700;
+  margin-bottom: 1.5rem;
+  line-height: 1.2;
+}
+.hero .hero-content p {
+  font-size: 1.25rem;
+  margin-bottom: 2rem;
+  color: #6c757d;
+}
+.hero .hero-content .hero-buttons .btn {
+  margin-right: 1rem;
+  margin-bottom: 1rem;
+}
+.hero .hero-image {
+  animation: float 6s ease-in-out infinite;
+}
+
+@keyframes float {
+  0% {
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(-20px);
+  }
+  100% {
+    transform: translateY(0px);
+  }
 }/*# sourceMappingURL=style.css.map */

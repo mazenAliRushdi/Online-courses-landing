@@ -42,4 +42,37 @@ document.addEventListener("DOMContentLoaded", function () {
       });
     });
   }
+
+  // ==================== ScrollReveal Animations ====================
+  if (typeof ScrollReveal !== "undefined") {
+    ScrollReveal().reveal(".reveal-left", {
+      origin: "left",
+      distance: "50px",
+      duration: 800,
+      delay: 200,
+      easing: "cubic-bezier(0.5, 0, 0, 1)",
+      reset: false,
+      mobile: true,
+    });
+
+    ScrollReveal().reveal(".reveal-right", {
+      origin: "right",
+      distance: "50px",
+      duration: 800,
+      delay: 200,
+      easing: "cubic-bezier(0.5, 0, 0, 1)",
+      reset: false,
+      mobile: true,
+    });
+
+    ScrollReveal().reveal(".reveal-bottom", {
+      origin: "bottom",
+      distance: "30px",
+      duration: 800,
+      delay: 200,
+      easing: "cubic-bezier(0.5, 0, 0, 1)",
+      reset: false,
+      mobile: true,
+    });
+  }
 });
