@@ -355,4 +355,39 @@ img {
 }
 .courses .course-card .course-body .course-footer .course-duration i {
   margin-right: 0.25rem;
+}
+
+.features {
+  padding: 100px 0;
+  background: linear-gradient(135deg, rgba(78, 107, 255, 0.05) 0%, rgba(78, 107, 255, 0) 100%);
+}
+.features .feature-item {
+  text-align: center;
+  padding: 2rem;
+  margin-bottom: 1.5rem;
+  transition: all 0.3s ease;
+}
+.features .feature-item:hover {
+  transform: translateY(-5px);
+}
+.features .feature-item .feature-icon {
+  width: 80px;
+  height: 80px;
+  background: rgba(78, 107, 255, 0.1);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto 1.5rem;
+}
+.features .feature-item .feature-icon i {
+  font-size: 2rem;
+  color: #4e6bff;
+}
+.features .feature-item h4 {
+  font-size: 1.25rem;
+  margin-bottom: 1rem;
+}
+.features .feature-item p {
+  color: #6c757d;
 }/*# sourceMappingURL=style.css.map */
