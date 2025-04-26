@@ -75,4 +75,31 @@ document.addEventListener("DOMContentLoaded", function () {
       mobile: true,
     });
   }
+
+  // ==================== Card Hover Effects ====================
+  // Course card hover effect
+  document.querySelectorAll(".course-card").forEach((card) => {
+    card.addEventListener("mouseenter", function () {
+      const img = this.querySelector(".course-img img");
+      if (img) img.style.transform = "scale(1.05)";
+    });
+
+    card.addEventListener("mouseleave", function () {
+      const img = this.querySelector(".course-img img");
+      if (img) img.style.transform = "scale(1)";
+    });
+  });
+
+  // Testimonial card hover effect
+  document.querySelectorAll(".testimonial-card").forEach((card) => {
+    card.addEventListener("mouseenter", function () {
+      const img = this.querySelector(".testimonial-img");
+      if (img) img.style.transform = "scale(1.1)";
+    });
+
+    card.addEventListener("mouseleave", function () {
+      const img = this.querySelector(".testimonial-img");
+      if (img) img.style.transform = "scale(1)";
+    });
+  });
 });
