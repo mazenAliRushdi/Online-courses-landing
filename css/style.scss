@@ -1,0 +1,102 @@
+// Variables
+$primary-color: #4e6bff;
+$secondary-color: #6c757d;
+$dark-color: #1a1a2e;
+$light-color: #f8f9fa;
+$text-color: #333;
+$text-light: #f8f9fa;
+$text-dark: #212529;
+$border-radius: 8px;
+$box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+$transition: all 0.3s ease;
+
+// Dark mode variables
+.dark-mode {
+  --bg-color: #1a1a2e;
+  --text-color: #f8f9fa;
+  --card-bg: #16213e;
+  --nav-bg: rgba(26, 26, 46, 0.9);
+  --border-color: #2d3748;
+}
+
+.light-mode {
+  --bg-color: #ffffff;
+  --text-color: #212529;
+  --card-bg: #ffffff;
+  --nav-bg: rgba(255, 255, 255, 0.9);
+  --border-color: #e9ecef;
+}
+
+// Base Styles
+body {
+  scroll-behavior: smooth;
+}
+
+.back-to-top {
+  transition: all 0.3s ease;
+}
+
+.back-to-top:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+}
+body {
+  font-family: "Poppins", sans-serif;
+  color: var(--text-color);
+  background-color: var(--bg-color);
+  transition: $transition;
+  line-height: 1.6;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-weight: 600;
+  margin-bottom: 1rem;
+}
+
+p {
+  margin-bottom: 1rem;
+}
+
+a {
+  text-decoration: none;
+  transition: $transition;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+.btn {
+  padding: 0.75rem 1.5rem;
+  border-radius: $border-radius;
+  font-weight: 500;
+  transition: $transition;
+  &:hover {
+    transform: translateY(-3px);
+    box-shadow: $box-shadow;
+  }
+}
+
+.btn-primary {
+  background-color: $primary-color;
+  border-color: $primary-color;
+  &:hover {
+    background-color: darken($primary-color, 10%);
+    border-color: darken($primary-color, 10%);
+  }
+}
+
+.btn-outline-secondary {
+  border-color: var(--text-color);
+  color: var(--text-color);
+  &:hover {
+    background-color: var(--text-color);
+    color: var(--bg-color);
+  }
+}

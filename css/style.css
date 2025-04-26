@@ -1,1 +1,89 @@
-/*# sourceMappingURL=style.css.map */
+.dark-mode {
+  --bg-color: #1a1a2e;
+  --text-color: #f8f9fa;
+  --card-bg: #16213e;
+  --nav-bg: rgba(26, 26, 46, 0.9);
+  --border-color: #2d3748;
+}
+
+.light-mode {
+  --bg-color: #ffffff;
+  --text-color: #212529;
+  --card-bg: #ffffff;
+  --nav-bg: rgba(255, 255, 255, 0.9);
+  --border-color: #e9ecef;
+}
+
+body {
+  scroll-behavior: smooth;
+}
+
+.back-to-top {
+  transition: all 0.3s ease;
+}
+
+.back-to-top:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+}
+
+body {
+  font-family: "Poppins", sans-serif;
+  color: var(--text-color);
+  background-color: var(--bg-color);
+  transition: all 0.3s ease;
+  line-height: 1.6;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-weight: 600;
+  margin-bottom: 1rem;
+}
+
+p {
+  margin-bottom: 1rem;
+}
+
+a {
+  text-decoration: none;
+  transition: all 0.3s ease;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+.btn {
+  padding: 0.75rem 1.5rem;
+  border-radius: 8px;
+  font-weight: 500;
+  transition: all 0.3s ease;
+}
+.btn:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+}
+
+.btn-primary {
+  background-color: #4e6bff;
+  border-color: #4e6bff;
+}
+.btn-primary:hover {
+  background-color: #1b40ff;
+  border-color: #1b40ff;
+}
+
+.btn-outline-secondary {
+  border-color: var(--text-color);
+  color: var(--text-color);
+}
+.btn-outline-secondary:hover {
+  background-color: var(--text-color);
+  color: var(--bg-color);
+}/*# sourceMappingURL=style.css.map */
