@@ -22,6 +22,7 @@ document.addEventListener("DOMContentLoaded", function () {
       document.body.classList.add("dark-mode");
     }
   }
+
   // ==================== Enhanced Navbar Logic ====================
   const navbar = document.querySelector(".navbar");
   const toggler = document.querySelector(".navbar-toggler");
@@ -66,36 +67,56 @@ document.addEventListener("DOMContentLoaded", function () {
     });
   }
 
-  // ==================== ScrollReveal Animations ====================
-  if (typeof ScrollReveal !== "undefined") {
-    ScrollReveal().reveal(".reveal-left", {
-      origin: "left",
-      distance: "50px",
-      duration: 800,
-      delay: 200,
-      easing: "cubic-bezier(0.5, 0, 0, 1)",
-      reset: false,
-      mobile: true,
-    });
+  // ==================== Scroll Effects ====================
+  // Navbar scroll effect
+  window.addEventListener("scroll", function () {
+    if (window.scrollY > 50) {
+      navbar.classList.add("scrolled");
+    } else {
+      navbar.classList.remove("scrolled");
+    }
 
-    ScrollReveal().reveal(".reveal-right", {
-      origin: "right",
-      distance: "50px",
-      duration: 800,
-      delay: 200,
-      easing: "cubic-bezier(0.5, 0, 0, 1)",
-      reset: false,
-      mobile: true,
-    });
+    // Back to top button
+    const backToTop = document.querySelector(".back-to-top");
+    if (window.scrollY > 300) {
+      backToTop.classList.add("active");
+    } else {
+      backToTop.classList.remove("active");
+    }
+  });
 
-    ScrollReveal().reveal(".reveal-bottom", {
-      origin: "bottom",
-      distance: "30px",
-      duration: 800,
-      delay: 200,
-      easing: "cubic-bezier(0.5, 0, 0, 1)",
-      reset: false,
-      mobile: true,
+  // Smooth scrolling for navigation links
+  document.querySelectorAll('a[href^="#"]').forEach((anchor) => {
+    anchor.addEventListener("click", function (e) {
+      if (this.hash !== "") {
+        e.preventDefault();
+
+        const target = document.querySelector(this.hash);
+        if (target) {
+          const navbarHeight = document.querySelector(".navbar").offsetHeight;
+          const targetPosition =
+            target.getBoundingClientRect().top +
+            window.pageYOffset -
+            navbarHeight;
+
+          window.scrollTo({
+            top: targetPosition,
+            behavior: "smooth",
+          });
+        }
+      }
+    });
+  });
+
+  // Back to top button
+  const backToTop = document.querySelector(".back-to-top");
+  if (backToTop) {
+    backToTop.addEventListener("click", function (e) {
+      e.preventDefault();
+      window.scrollTo({
+        top: 0,
+        behavior: "smooth",
+      });
     });
   }
 
@@ -176,5 +197,79 @@ document.addEventListener("DOMContentLoaded", function () {
         }, 2000);
       }, 1000);
     });
+  }
+
+  // ==================== ScrollReveal Animations ====================
+  if (typeof ScrollReveal !== "undefined") {
+    ScrollReveal().reveal(".reveal-left", {
+      origin: "left",
+      distance: "50px",
+      duration: 800,
+      delay: 200,
+      easing: "cubic-bezier(0.5, 0, 0, 1)",
+      reset: false,
+      mobile: true,
+    });
+
+    ScrollReveal().reveal(".reveal-right", {
+      origin: "right",
+      distance: "50px",
+      duration: 800,
+      delay: 200,
+      easing: "cubic-bezier(0.5, 0, 0, 1)",
+      reset: false,
+      mobile: true,
+    });
+
+    ScrollReveal().reveal(".reveal-bottom", {
+      origin: "bottom",
+      distance: "30px",
+      duration: 800,
+      delay: 200,
+      easing: "cubic-bezier(0.5, 0, 0, 1)",
+      reset: false,
+      mobile: true,
+    });
+  }
+
+  // ==================== Helper Functions ====================
+  function addOverlay() {
+    if (document.querySelector(".navbar-overlay")) return;
+
+    const overlay = document.createElement("div");
+    overlay.className = "navbar-overlay";
+    overlay.style.cssText = `
+              position: fixed;
+              top: 0;
+              left: 0;
+              width: 100%;
+              height: 100%;
+              background: rgba(0,0,0,0.5);
+              z-index: 999;
+              opacity: 0;
+              transition: opacity 0.3s ease;
+          `;
+
+    overlay.addEventListener("click", function () {
+      const toggler = document.querySelector(".navbar-toggler");
+      if (toggler) toggler.click();
+    });
+
+    document.body.appendChild(overlay);
+
+    // Trigger reflow and fade in
+    setTimeout(() => {
+      overlay.style.opacity = "1";
+    }, 10);
+  }
+
+  function removeOverlay() {
+    const overlay = document.querySelector(".navbar-overlay");
+    if (overlay) {
+      overlay.style.opacity = "0";
+      setTimeout(() => {
+        if (overlay.parentNode) overlay.parentNode.removeChild(overlay);
+      }, 300);
+    }
   }
 });
