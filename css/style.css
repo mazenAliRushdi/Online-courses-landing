@@ -88,6 +88,52 @@ img {
   color: var(--bg-color);
 }
 
+.dark-mode-toggle {
+  position: fixed;
+  top: 20px;
+  right: 20px;
+  z-index: 9999;
+}
+.dark-mode-toggle .toggle-checkbox {
+  display: none;
+}
+.dark-mode-toggle .toggle-label {
+  position: relative;
+  display: block;
+  width: 60px;
+  height: 30px;
+  background: var(--card-bg);
+  border-radius: 50px;
+  cursor: pointer;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+  padding: 5px;
+}
+.dark-mode-toggle .toggle-label i {
+  position: absolute;
+  color: #4e6bff;
+  font-size: 1rem;
+  top: 6px;
+}
+.dark-mode-toggle .toggle-label i.fa-sun {
+  left: 8px;
+}
+.dark-mode-toggle .toggle-label i.fa-moon {
+  right: 8px;
+}
+.dark-mode-toggle .toggle-label .toggle-ball {
+  position: absolute;
+  top: 3px;
+  left: 5px;
+  width: 24px;
+  height: 24px;
+  background: #4e6bff;
+  border-radius: 50%;
+  transition: all 0.3s ease;
+}
+.dark-mode-toggle .toggle-checkbox:checked + .toggle-label .toggle-ball {
+  transform: translateX(28px);
+}
+
 .navbar {
   padding: 1.2rem 0;
   background: rgba(26, 26, 46, 0.95);

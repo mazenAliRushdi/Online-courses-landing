@@ -100,6 +100,53 @@ img {
     color: var(--bg-color);
   }
 }
+
+// Dark Mode Toggle
+.dark-mode-toggle {
+  position: fixed;
+  top: 20px;
+  right: 20px;
+  z-index: 9999;
+  .toggle-checkbox {
+    display: none;
+  }
+  .toggle-label {
+    position: relative;
+    display: block;
+    width: 60px;
+    height: 30px;
+    background: var(--card-bg);
+    border-radius: 50px;
+    cursor: pointer;
+    box-shadow: $box-shadow;
+    padding: 5px;
+    i {
+      position: absolute;
+      color: $primary-color;
+      font-size: 1rem;
+      top: 6px;
+      &.fa-sun {
+        left: 8px;
+      }
+      &.fa-moon {
+        right: 8px;
+      }
+    }
+    .toggle-ball {
+      position: absolute;
+      top: 3px;
+      left: 5px;
+      width: 24px;
+      height: 24px;
+      background: $primary-color;
+      border-radius: 50%;
+      transition: $transition;
+    }
+  }
+  .toggle-checkbox:checked + .toggle-label .toggle-ball {
+    transform: translateX(28px);
+  }
+}
 // Navigation
 
 .navbar {

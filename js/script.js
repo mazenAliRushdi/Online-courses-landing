@@ -1,4 +1,27 @@
 document.addEventListener("DOMContentLoaded", function () {
+  // ==================== Dark Mode Toggle ====================
+  const darkModeToggle = document.getElementById("toggle");
+
+  if (darkModeToggle) {
+    darkModeToggle.addEventListener("change", function () {
+      if (this.checked) {
+        document.body.classList.remove("light-mode");
+        document.body.classList.add("dark-mode");
+        localStorage.setItem("darkMode", "enabled");
+      } else {
+        document.body.classList.remove("dark-mode");
+        document.body.classList.add("light-mode");
+        localStorage.setItem("darkMode", "disabled");
+      }
+    });
+
+    // Check for saved preference
+    if (localStorage.getItem("darkMode") === "enabled") {
+      darkModeToggle.checked = true;
+      document.body.classList.remove("light-mode");
+      document.body.classList.add("dark-mode");
+    }
+  }
   // ==================== Enhanced Navbar Logic ====================
   const navbar = document.querySelector(".navbar");
   const toggler = document.querySelector(".navbar-toggler");
