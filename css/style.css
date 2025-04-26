@@ -526,4 +526,109 @@ img {
 }
 .contact .contact-form textarea.form-control {
   min-height: 150px;
+}
+
+.footer {
+  padding: 80px 0 0;
+  background: var(--card-bg);
+  color: var(--text-color);
+}
+.footer .footer-col {
+  margin-bottom: 2rem;
+}
+.footer .footer-col h5 {
+  font-size: 1.25rem;
+  margin-bottom: 1.5rem;
+  position: relative;
+}
+.footer .footer-col h5::after {
+  content: "";
+  position: absolute;
+  bottom: -8px;
+  left: 0;
+  width: 40px;
+  height: 3px;
+  background: #4e6bff;
+}
+.footer .footer-col p {
+  color: #6c757d;
+  margin-bottom: 1.5rem;
+}
+.footer .footer-col ul {
+  list-style: none;
+  padding: 0;
+}
+.footer .footer-col ul li {
+  margin-bottom: 0.75rem;
+}
+.footer .footer-col ul li a {
+  color: #6c757d;
+  transition: all 0.3s ease;
+}
+.footer .footer-col ul li a:hover {
+  color: #4e6bff;
+  padding-left: 5px;
+}
+.footer .footer-col .social-links a {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 40px;
+  height: 40px;
+  background: rgba(78, 107, 255, 0.1);
+  color: #4e6bff;
+  border-radius: 50%;
+  margin-right: 0.5rem;
+  transition: all 0.3s ease;
+}
+.footer .footer-col .social-links a:hover {
+  background: #4e6bff;
+  color: white;
+  transform: translateY(-3px);
+}
+.footer .footer-col .newsletter-form {
+  display: flex;
+}
+.footer .footer-col .newsletter-form input {
+  flex: 1;
+  padding: 0.75rem;
+  border: 1px solid var(--border-color);
+  border-radius: 8px 0 0 8px;
+  background: var(--bg-color);
+  color: var(--text-color);
+}
+.footer .footer-col .newsletter-form input:focus {
+  outline: none;
+  border-color: #4e6bff;
+}
+.footer .footer-col .newsletter-form button {
+  background: #4e6bff;
+  color: white;
+  border: none;
+  padding: 0 1rem;
+  border-radius: 0 8px 8px 0;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+.footer .footer-col .newsletter-form button:hover {
+  background: #1b40ff;
+}
+.footer .footer-bottom {
+  padding: 1.5rem 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+.footer .footer-bottom p {
+  margin-bottom: 1rem;
+  color: #6c757d;
+}
+.footer .footer-bottom .footer-links a {
+  color: #6c757d;
+  margin: 0 0.5rem;
+  transition: all 0.3s ease;
+}
+.footer .footer-bottom .footer-links a:hover {
+  color: #4e6bff;
 }/*# sourceMappingURL=style.css.map */
