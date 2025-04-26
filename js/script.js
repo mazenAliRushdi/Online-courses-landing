@@ -102,4 +102,56 @@ document.addEventListener("DOMContentLoaded", function () {
       if (img) img.style.transform = "scale(1)";
     });
   });
+
+  // ==================== Form Handling ====================
+  // Contact form submission
+  const contactForm = document.querySelector(".contact-form form");
+  if (contactForm) {
+    contactForm.addEventListener("submit", function (e) {
+      e.preventDefault();
+      const button = this.querySelector('button[type="submit"]');
+      const buttonText = button.textContent;
+
+      button.innerHTML = '<i class="fas fa-spinner fa-spin"></i> Processing...';
+      button.disabled = true;
+
+      // Simulate form submission
+      setTimeout(function () {
+        button.innerHTML = '<i class="fas fa-check"></i> Message Sent';
+        contactForm.reset();
+
+        // Reset button text after 3 seconds
+        setTimeout(function () {
+          button.textContent = buttonText;
+          button.disabled = false;
+        }, 3000);
+      }, 1500);
+    });
+  }
+
+  // Newsletter form submission
+  const newsletterForm = document.querySelector(".newsletter-form");
+  if (newsletterForm) {
+    newsletterForm.addEventListener("submit", function (e) {
+      e.preventDefault();
+      const input = this.querySelector('input[type="email"]');
+      const button = this.querySelector('button[type="submit"]');
+      const buttonHtml = button.innerHTML;
+
+      button.innerHTML = '<i class="fas fa-spinner fa-spin"></i>';
+      button.disabled = true;
+
+      // Simulate submission
+      setTimeout(function () {
+        button.innerHTML = '<i class="fas fa-check"></i>';
+        input.value = "";
+
+        // Reset button after 2 seconds
+        setTimeout(function () {
+          button.innerHTML = buttonHtml;
+          button.disabled = false;
+        }, 2000);
+      }, 1000);
+    });
+  }
 });

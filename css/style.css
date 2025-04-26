@@ -489,4 +489,41 @@ img {
 .cta .cta-content .btn {
   padding: 1rem 2rem;
   font-size: 1.1rem;
+}
+
+.contact {
+  padding: 100px 0;
+}
+.contact .contact-info-item {
+  display: flex;
+  align-items: flex-start;
+  margin-bottom: 2rem;
+}
+.contact .contact-info-item i {
+  font-size: 1.5rem;
+  color: #4e6bff;
+  margin-right: 1.5rem;
+  margin-top: 0.25rem;
+}
+.contact .contact-info-item h4 {
+  margin-bottom: 0.5rem;
+}
+.contact .contact-info-item p {
+  color: #6c757d;
+  margin-bottom: 0;
+}
+.contact .contact-form .form-control {
+  padding: 1rem;
+  border-radius: 8px;
+  border: 1px solid var(--border-color);
+  background: var(--card-bg);
+  color: var(--text-color);
+  margin-bottom: 1.5rem;
+}
+.contact .contact-form .form-control:focus {
+  box-shadow: 0 0 0 0.25rem rgba(78, 107, 255, 0.25);
+  border-color: #4e6bff;
+}
+.contact .contact-form textarea.form-control {
+  min-height: 150px;
 }/*# sourceMappingURL=style.css.map */
